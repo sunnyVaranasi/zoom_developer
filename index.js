@@ -63,6 +63,12 @@ if(cluster.isMaster){
     });
     
     
+    router.get('/terms',function(req,res){
+        res.sendFile(path.join(__dirname+'/terms.html'));
+        //__dirname : It will resolve to your project folder.
+    });
+
+    
     router.get('/privacy',function(req,res){
         res.sendFile(path.join(__dirname+'/privacy.html'));
         //__dirname : It will resolve to your project folder.
